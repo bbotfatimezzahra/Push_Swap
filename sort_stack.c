@@ -6,13 +6,13 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 10:57:35 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/22 08:51:12 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/03/31 09:51:20 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-void	count_max(t_list *a, int *max, int *min)
+void	count_max(t_list *a, long *max, long *min)
 {
 	t_list	*tmp;
 
@@ -32,8 +32,8 @@ void	count_max(t_list *a, int *max, int *min)
 void	sort_3stack(t_header **h)
 {
 	t_list	*tmp;
-	int		min;
-	int		max;
+	long	min;
+	long	max;
 
 	if (check_sort(&(*h)->next))
 		return ;

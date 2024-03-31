@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 15:12:48 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/19 14:28:43 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/03/31 09:50:30 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@ int	median_of_three(int x, int y, int z)
 		return (z);
 }
 
-void	switch_elements(int *a, int *b)
+void	switch_elements(long *a, long *b)
 {
-	int	temp;
+	long	temp;
 
 	temp = *a;
 	*a = *b;
 	*b = temp;
 }
 
-void	quick_sort(int *arr, int low, int high)
+void	quick_sort(long *arr, int low, int high)
 {
-	int	pivot;
-	int	i;
-	int	j;
+	long	pivot;
+	int		i;
+	int		j;
 
 	if (low < high)
 	{
@@ -58,7 +58,7 @@ void	quick_sort(int *arr, int low, int high)
 	}
 }
 
-void	index_stack(t_list **a, int *arr, int size)
+void	index_stack(t_list **a, long *arr, int size)
 {
 	int		i;
 	t_list	*tmp;
@@ -78,12 +78,12 @@ void	sort_array(t_header **h)
 {
 	int		size;
 	int		i;
-	int		*arr;
+	long	*arr;
 	t_list	*a;
 
 	a = (*h)->next;
 	size = ft_lstsize(a);
-	arr = malloc((size + 1) * sizeof(int));
+	arr = malloc((size + 1) * sizeof(long));
 	if (!arr)
 		return ;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 22:47:01 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/27 13:28:32 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/03/31 09:41:38 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 typedef struct s_list
 {
-	int				content;
+	long			content;
 	int				index;
 	struct s_list	*next;
 }				t_list;
@@ -52,11 +52,11 @@ int		ft_isdigit(int c);
 int		ft_issign(int c);
 int		ft_isspace(int c);
 int		worth_check(char *str);
-int		check_arg(char **list);
-int		fill_stack(t_header **h, char **list, int elem);
+int		check_arg(char **argv);
+int		fill_stack(t_header **h, char **argv, int argc);
 int		check_dup(t_header **h);
 int		ft_headernew(t_header **h);
-t_list	*ft_lstnew(int content);
+t_list	*ft_lstnew(long content);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);

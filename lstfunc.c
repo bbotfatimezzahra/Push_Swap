@@ -6,13 +6,13 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/17 14:18:58 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/19 16:57:38 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/03/31 09:50:52 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-t_list	*ft_lstnew(int content)
+t_list	*ft_lstnew(long content)
 {
 	t_list	*list;
 

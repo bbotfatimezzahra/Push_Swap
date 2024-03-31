@@ -6,24 +6,24 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 18:40:07 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/22 08:55:38 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/03/31 09:43:21 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pushswap.h"
 
-int	check_arg(char **list)
+int	check_arg(char **argv)
 {
 	int		i;
 	int		j;
 	char	*c;
 
 	i = 1;
-	while (list[i])
+	while (argv[i])
 	{
-		if (!worth_check(list[i]))
+		if (!worth_check(argv[i]))
 			return (0);
-		c = list[i];
+		c = argv[i];
 		j = 0;
 		while (c[j])
 		{
