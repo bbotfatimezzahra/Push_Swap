@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 07:09:20 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/31 09:45:48 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/04/04 22:31:37 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,11 @@ long	ft_atoi(const char *str, int *index)
 		i++;
 	}
 	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
+	{
 		result = (result * 10) + (str[i++] - '0');
+		if (result * sign > INT_MAX || result * sign < INT_MIN)
+			return (2147483649);
+	}
 	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
 		i++;
 	*index = i;

@@ -6,7 +6,7 @@
 /*   By: fbbot <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 16:57:49 by fbbot             #+#    #+#             */
-/*   Updated: 2024/03/31 07:50:15 by fbbot            ###   ########.fr       */
+/*   Updated: 2024/04/04 17:52:37 by fbbot            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	print_stack(t_list **stack)
 	pt = (*stack);
 	while (pt)
 	{
-		printf("%d index : %d\n", pt->content, pt->index);
+		printf("%lu index : %d\n", pt->content, pt->index);
 		pt = pt->next;
 	}
 }
